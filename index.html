@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="main.css" />
+  <title>Ninja Game Simulator</title>
+</head>
+
+<body class="bk-image">
+  <main class="app" aria-label="Ninja Game Simulator">
+    <header class="header">
+      <div>
+        <h1>Ninja Game Simulator</h1>
+        <p class="sub">Keyboard + buttons • smooth animation loop • responsive canvas</p>
+      </div>
+
+      <div class="hud" aria-label="Status">
+        <div class="hud-row"><span class="k">State</span><span id="hudState" class="v">—</span></div>
+        <div class="hud-row"><span class="k">Queue</span><span id="hudQueue" class="v">—</span></div>
+        <div class="hud-row"><span class="k">FPS</span><span id="hudFps" class="v">—</span></div>
+      </div>
+    </header>
+
+    <section class="stage" aria-label="Game Canvas">
+      <div class="canvas-wrap">
+        <canvas id="canvas" aria-label="Game canvas"></canvas>
+        <div id="loading" class="loading" aria-live="polite">
+          <div class="spinner" aria-hidden="true"></div>
+          <div>
+            <div class="loading-title">Loading assets…</div>
+            <div id="loadingProgress" class="loading-sub">0%</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="help" aria-label="Controls">
+        <h2>Controls</h2>
+        <ul>
+          <li><kbd>↑</kbd> Kick</li>
+          <li><kbd>↓</kbd> Punch</li>
+          <li><kbd>→</kbd> Forward</li>
+          <li><kbd>←</kbd> Backward</li>
+          <li><kbd>Space</kbd> Block</li>
+        </ul>
+        <p class="tip">Tip: queue combos by pressing actions quickly.</p>
+      </aside>
+    </section>
+
+    <section class="controls" aria-label="Actions">
+      <button id="kick" class="btn">Kick</button>
+      <button id="punch" class="btn">Punch</button>
+      <button id="forward" class="btn">Forward</button>
+      <button id="backward" class="btn">Backward</button>
+      <button id="block" class="btn">Block</button>
+      <button id="reset" class="btn btn-ghost" title="Reset position and clear queue">Reset</button>
+    </section>
+
+    <footer class="footer">
+      <span>Built with HTML5 Canvas + JavaScript</span>
+      <span class="dot">•</span>
+      <span>requestAnimationFrame + fixed timestep scheduler</span>
+    </footer>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
