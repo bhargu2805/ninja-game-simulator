@@ -1,6 +1,7 @@
 # Ninja Game Simulator (HTML5 Canvas)
 
 An interactive 2D, sprite‑animated ninja game built with **HTML5 Canvas + JavaScript**.
+The game is live at: https://bhargu2805.github.io/ninja-game-simulator/
 
 ## What this project demonstrates
 
